@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/no-trbl-2-u/shapes-n-lances/issues"
   },
-  "homepage": "https://github.com/no-trbl-2-u/shapes-n-lances#readme"
+  "homepage": "https://github.com/no-trbl-2-u/shapes-n-lances#readme",
+  "devDependencies": {
+    "typescript": "^3.2.2"
+  }
 }
