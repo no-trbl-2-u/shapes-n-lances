@@ -1,9 +1,9 @@
 ( (Game, Models, Engine) => {
-    const thing = new Models.Entity(2, 2, 100, 100);
-
-    thing.dance();
-
-    console.log(thing.x, thing.y);
+  const player = new Models.Entity("player", 2, 2, 100, 100);
+  
+  player.logPosition()
+  player.move(1, -1)
+  player.logPostision()
 
 }) (window.Game = window.Game || {},
     window.Game.Models = window.Game.Models || {},

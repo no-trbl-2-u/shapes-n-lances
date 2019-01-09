@@ -1,28 +1,29 @@
 ( (game, models) => {
 
-    models.Entity = Entity;
+  models.Entity = Entity;
 
-    function Entity(x, y, w, h) {
-        return {
-            x,
-            y,
-            w,
-            h,
+  function Entity(name, x, y, w, h) {
+    
+    // Properties
+    this.name = name
+    this.position = {x: x, y: y}
+    this.width = w
+    this.height = h
 
-            move(x, y) {
-                this.x += x;
-                this.y += y;
+    // Methods
 
-                return this;
-            },
-
-            dance() {
-                return this
-                    .move(this.w, -this.h)
-                    .move(-this.w, this.h);
-            }
-        }
+    this.move = (x, y) => {
+      this.x += x;
+      this.y += y;
+      return this
     }
 
+    this.logPosition = () => console.log(
+      `Player position is: x:${this.x}, y:${this.y}`
+    )
+
+    return this;
+  }
+
 }) (window.Game = window.Game || {},
-    window.Game.Models = window.Game.Models || {});
+  window.Game.Models = window.Game.Models || {});
