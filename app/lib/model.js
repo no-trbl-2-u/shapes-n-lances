@@ -1,4 +1,4 @@
-( (game, models) => {
+((game, models) => {
 
   models.Entity = Entity;
 
