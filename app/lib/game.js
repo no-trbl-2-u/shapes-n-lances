@@ -1,9 +1,6 @@
 ( (Game, Models, Engine) => {
-  const player = new Models.Entity("player", 2, 2, 100, 100);
   
-  player.logPosition()
-  player.move(1, -1)
-  player.logPostision()
+  const player = new Models.Entity("player", 10, 15, 100, 100);
 
 }) (window.Game = window.Game || {},
     window.Game.Models = window.Game.Models || {},

@@ -6,7 +6,8 @@
     
     // Properties
     this.name = name
-    this.position = {x: x, y: y}
+    this.x = x
+    this.y = y
     this.width = w
     this.height = h
 
@@ -15,6 +16,7 @@
     this.move = (x, y) => {
       this.x += x;
       this.y += y;
+      this.logPosition();
       return this
     }
 
