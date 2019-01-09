@@ -1,0 +1,19 @@
+{
+  "name": "shapes-n-lances",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/no-trbl-2-u/shapes-n-lances.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/no-trbl-2-u/shapes-n-lances/issues"
+  },
+  "homepage": "https://github.com/no-trbl-2-u/shapes-n-lances#readme"
+}
