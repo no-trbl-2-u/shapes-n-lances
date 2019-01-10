@@ -1,23 +1,23 @@
 {
   "name": "shapes-n-lances",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
-  "main": "index.js",
+  "main": "bundle.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "http-server ./app"
+    "build": "webpack",
+    "dev": "webpack-dev-server",
+    "start": "http-server ./www"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/no-trbl-2-u/shapes-n-lances.git"
-  },
+  "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/no-trbl-2-u/shapes-n-lances/issues"
-  },
-  "homepage": "https://github.com/no-trbl-2-u/shapes-n-lances#readme",
   "devDependencies": {
-    "http-server": "^0.11.1"
+    "http-server": "^0.11.1",
+    "ts-loader": "^5.3.3",
+    "typescript": "^3.2.2",
+    "webpack": "^4.28.1",
+    "webpack-cli": "^3.2.1",
+    "webpack-dev-server": "^3.1.14"
   }
 }
