@@ -15,8 +15,8 @@
     function animate() {
         // call again next time we can draw
         requestAnimationFrame(animate);
-        // clear canvas
 
+        // clear canvas
         context.clearRect(
             0,
             0,
@@ -37,6 +37,22 @@
     }
 
     animate();
+
+    document.onkeypress = function(e) {
+        e = e || window.event;
+        const charCode = (typeof e.which == "number") ? e.which : e.keyCode;
+        if (charCode) {
+            graph.forEach(function(o) {
+                try {
+                    if (o.event) {
+                        o.event(String.fromCharCode(charCode));
+                    }
+                } catch (e) {
+                    console.error(e);
+                }
+            });
+        }
+    };
 
 }) (window.Game = window.Game || {},
     window.Game.Engine = window.Game.Engine || {});
