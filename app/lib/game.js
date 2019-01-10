@@ -1,6 +1,6 @@
 ( (Game, Models, Engine) => {
 
-  const player = new Models.Entity("player", 10, 15, 100, 100);
+  const player = new Models.Entity("player", 10, 15, 100, 100, 10);
 
     Engine.Entities.push(player);
 

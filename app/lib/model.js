@@ -2,7 +2,7 @@
 
   models.Entity = Entity;
 
-  function Entity(name, x, y, w, h) {
+  function Entity(name, x, y, w, h, s) {
 
     // Properties
     this.name = name
@@ -10,6 +10,7 @@
     this.y = y
     this.width = w
     this.height = h
+    this.speed = s
 
     // Methods
 
@@ -28,11 +29,14 @@
     this.render = (ctx) => {
 
       ctx.beginPath();
+      // NAME
       ctx.fillStyle = "white";
-      // ctx.fillRect(this.x, this.y, this.width, this.height);
+
+      // Circle Shape/ Position
       ctx.arc(this.x, this.y, 50, 0, 2 * Math.PI)
       ctx.stroke();
-      ctx.fillStyle = '#000';
+      ctx.fillStyle = "white";
+      ctx.fill();
 
       ctx.fillText(this.name, this.x, this.y);
     };
@@ -40,13 +44,16 @@
 
     this.event = (char) => {
       if (char === "s") {
-        this.y++;
+        this.y += this.speed;
       }
       if (char === "w") {
-        this.y--;
+        this.y -= this.speed;
       }
       if (char === "a") {
-        this.x++;
+        this.x -= this.speed;
+      }
+      if (char === "d") {
+        this.x += this.speed;
       }
     };
 
