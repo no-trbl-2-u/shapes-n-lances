@@ -1,4 +1,6 @@
 const path = require("path");
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const {version} = require("./package");
 
 module.exports = {
     mode: "development",
@@ -6,7 +8,7 @@ module.exports = {
     entry: "./lib/main.ts",
     output: {
         path: path.resolve(__dirname, 'www', 'dist'),
-        filename: "bundle.js"
+        filename: "app.js"
     },
     resolve: {
         extensions: [".ts", ".js"]
@@ -15,5 +17,11 @@ module.exports = {
         rules: [
             { test: /\.ts$/, loader: "ts-loader" }
         ]
-    }
+    },
+    plugins: [
+        new HtmlWebpackPlugin({
+            title: `shapes + lances | ${version}`,
+            template: 'www/main.html'
+        })
+    ]
 };
