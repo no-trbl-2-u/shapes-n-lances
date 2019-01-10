@@ -24,17 +24,23 @@
       `Player position is: x:${this.x}, y:${this.y}`
     )
 
+    // ctx.arc(x, y, radius, startAngle, endAngle [, anticlockwise]);
     this.render = (ctx) => {
-        ctx.fillStyle = "red";
-        ctx.fillRect(this.x, this.y, this.width, this.height);
-        ctx.fillStyle = '#000';
-        ctx.fillText(this.name, this.x, this.y);
+      
+      ctx.beginPath();
+      ctx.fillStyle = "white";
+      // ctx.fillRect(this.x, this.y, this.width, this.height);
+      ctx.arc(100, 75, 50, 0, 2 * Math.PI)
+      ctx.stroke();
+      ctx.fillStyle = '#000';
 
-        this.x += 1;
-        if (this.x > 500) {
-            this.x = 0;
-        }
-        };
+      ctx.fillText(this.name, this.x, this.y);
+
+      this.x += 1;
+      if (this.x > 500) {
+          this.x = 0;
+      }
+    };
 
     return this;
   }
